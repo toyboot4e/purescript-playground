@@ -92,16 +92,7 @@ main' = do
   let ans = fromJust $ maximum res
   liftEffect $ log $ if ans == mempty then "-1" else (\s -> {- Int64 の接尾辞 l を消す -} S.take (S.length s - 1) s) (show (unwrap ans))
 
-main'' :: Partial => StateT String Effect Unit
-main'' = do
-  Tuple n m <- ints2
-  xs <- ints
-  ys <- ints
-  liftEffect $ log $ show (Tuple n m)
-  liftEffect $ log $ "line 1: " <> show xs
-  liftEffect $ log $ "line 2: " <> show ys
-
 main :: Effect Unit
 main = do
   input <- FS.readTextFile UTF8 "/dev/stdin"
-  unsafePartial $ evalStateT main'' input
+  unsafePartial $ evalStateT main' input

@@ -1,0 +1,4 @@
+* PureScript playground
+
+I tried solving [[https://atcoder.jp/contests/dp][EDPC - D]] in PureScript.
+

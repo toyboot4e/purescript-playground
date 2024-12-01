@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bower": "^1.8.14",
+    "pulp": "^16.0.2",
+    "purescript-language-server": "^0.18.2",
+    "purs-tidy": "^0.11.0",
+    "spago": "^0.21.0"
+  }
+}
